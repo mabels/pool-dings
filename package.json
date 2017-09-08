@@ -1,6 +1,6 @@
 {
   "name": "pool-dings",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/src/pool-dings.js",
   "engines": {
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "install":"npm run build",
+    "install":"tsc",
     "prebuild": "npm run clean",
     "build": "tsc",
     "build:watch": "tsc-watch server.ts --outDir ./dist --onSuccess 'node ./dist/server.ts'",
@@ -18,8 +18,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "preversion": "npm test",
     "version": "npm run build && conventional-changelog -p angular -v -r 0 > CHANGELOG.md && git add -A .",
-    "postversion": "git push && git push --tags",
-    "prepublish": "not-in-install && npm run build || echo 'In install cycle, skipping prepublish'"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
