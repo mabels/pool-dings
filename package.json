@@ -1,8 +1,9 @@
 {
   "name": "pool-dings",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/src/pool-dings.js",
+  "types": "./dist/src/pool-dings.d.ts",
   "engines": {
     "node": ">=6.9.5"
   },
