@@ -65,11 +65,11 @@ export class Actor {
 
 export class PoolDings {
 
-  private width: number;
+  private width: Number;
   private actors: Actor[];
-  private retryTick: number;
+  private retryTick: Number;
 
-  constructor(logger: winston.LoggerInstance, width: number, retryTick: number) {
+  constructor(logger: winston.LoggerInstance, width: Number, retryTick: Number) {
     this.width = width;
     this.retryTick = retryTick;
     logger.info(`PoolDings created:${width}`);
