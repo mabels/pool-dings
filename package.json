@@ -1,6 +1,6 @@
 {
   "name": "pool-dings",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/src/pool-dings.js",
   "engines": {
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
+    "install":"npm run build",
     "prebuild": "npm run clean",
     "build": "tsc",
     "build:watch": "tsc-watch server.ts --outDir ./dist --onSuccess 'node ./dist/server.ts'",
