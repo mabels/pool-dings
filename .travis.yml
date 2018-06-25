@@ -1,12 +1,10 @@
 language: node_js
 node_js:
-    - "6"
-dist: trusty
-
-
-install:
-    - nvm install 6
+    - "lts/boron"
+    - "lts/carbon"
 
 script:
     - npm install
+    - npm run build
+    - npm run lint
     - npm test

@@ -1,6 +1,6 @@
 {
   "name": "pool-dings",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/src/pool-dings.js",
   "types": "./dist/src/pool-dings.d.ts",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "install":"tsc",
+    "install": "tsc",
     "prebuild": "npm run clean",
     "build": "tsc",
     "build:watch": "tsc-watch server.ts --outDir ./dist --onSuccess 'node ./dist/server.ts'",
@@ -33,16 +33,15 @@
   "devDependencies": {
     "@types/chai": "^4.0.3",
     "@types/mocha": ">=2.2.33",
+    "@types/winston": ">=2.3.9",
     "chai": "^4.1.1",
     "mocha": ">=2.5.3",
     "rimraf": "^2.6.1",
-    "tsc-watch": "^1.0.7",
-    "tslint": "^5.6.0",
-    "typescript": ">=2.1.5"
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
-    "@types/winston": ">=0.0.32",
-    "winston": ">=2.2.0"
+    "winston": ">=3.0.0"
   },
   "publishConfig": {
     "tag": "next"

@@ -20,11 +20,11 @@ export interface ActionFactory {
 
 export class Actor {
   private state: ActorState;
-  private poolDing: PoolDings;
-  private action: Action;
+  // private readonly poolDing: PoolDings;
+  private readonly action: Action;
 
-  constructor(poolDing: PoolDings, action: Action) {
-    this.poolDing = poolDing;
+  constructor(_: PoolDings, action: Action) {
+    // this.poolDing = poolDing;
     this.state = ActorState.STOPPED;
     this.action = action;
   }
@@ -65,11 +65,11 @@ export class Actor {
 
 export class PoolDings {
 
-  private width: Number;
+  private readonly width: Number;
+  private readonly retryTick: Number;
   private actors: Actor[];
-  private retryTick: Number;
 
-  constructor(logger: winston.LoggerInstance, width: Number, retryTick: Number) {
+  constructor(logger: winston.Logger, width: Number, retryTick: Number) {
     this.width = width;
     this.retryTick = retryTick;
     logger.info(`PoolDings created:${width}`);
@@ -100,6 +100,6 @@ export class PoolDings {
 
 }
 
-export function create(logger: winston.LoggerInstance, width = 10, retryTick = 50): PoolDings {
+export function create(logger: winston.Logger, width = 10, retryTick = 50): PoolDings {
   return new PoolDings(logger, width, retryTick);
 }

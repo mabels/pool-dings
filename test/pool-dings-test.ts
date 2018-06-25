@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import * as winston from 'winston';
 import * as poolDings from '../src/pool-dings';
 
-const logger = new winston.Logger({
+const logger = winston.createLogger({
   level: 'info',
   transports: [
     new (winston.transports.Console)(),
@@ -59,6 +59,7 @@ describe('PoolDings', () => {
           pd.stop(() => {
             ++count;
             if (count >= 10) {
+              assert.equal(stopCount, 10 * poolSize);
               done();
               return;
             }
