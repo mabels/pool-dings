@@ -41,7 +41,7 @@
     "typescript": "^2.9.2"
   },
   "dependencies": {
-    "winston": ">=3.0.0"
+    "winston": ">=3.1.0"
   },
   "publishConfig": {
     "tag": "next"
