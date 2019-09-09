@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/mabels/pool-dings#readme",
   "devDependencies": {
-    "@types/chai": "^4.0.3",
+    "@types/chai": "^4.2.2",
     "@types/mocha": ">=2.2.33",
     "@types/winston": ">=2.3.9",
     "chai": "^4.1.1",
